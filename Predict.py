@@ -11,7 +11,7 @@ import pandas as pd
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
-from tqdm import tqdm  # 建议添加进度条
+from tqdm import tqdm  
 
 import pHLAmamba
 import Tokenizer
@@ -99,3 +99,4 @@ if __name__ == "__main__":
     print(f"Saving results to {args.output}")
     infer_df.to_csv(args.output, index=False)
     print("Done.")
+
