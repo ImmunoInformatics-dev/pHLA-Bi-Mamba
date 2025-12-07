@@ -20,13 +20,15 @@ class HLAPEPDataset(Dataset):
         return len(self.dataset)
 
     def __getitem__(self, idx):
-        hla_seq = self.data['mhc_seq'][idx]
-        pep_seq = self.data['pep'][idx]
-        label = self.data['label'][idx]
+        hla_seq = self.dataset['mhc_seq'].iloc[idx]
+        pep_seq = self.dataset['pep'].iloc[idx]
+        label = self.dataset['label'].iloc[idx]
+
         len_hla_seq = len(hla_seq)
         len_pep_seq = len(pep_seq)
 
         return hla_seq, pep_seq, label, len_hla_seq, len_pep_seq
+
 
 class HLAPEPDataset_infer(Dataset):
     def __init__(self, file_path):
@@ -36,8 +38,8 @@ class HLAPEPDataset_infer(Dataset):
         return len(self.data)
 
     def __getitem__(self, idx):
-        hla_seq = self.data['mhc_seq'][idx]
-        pep_seq = self.data['pep'][idx]
+        hla_seq = self.data['mhc_seq'].iloc[idx]
+        pep_seq = self.data['pep'].iloc[idx]
         len_hla_seq = len(hla_seq)
         len_pep_seq = len(pep_seq)
 
