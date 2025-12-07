@@ -19,7 +19,7 @@ This project relies on mamba-ssm, which requires a CUDA-enabled GPU environment.
 
 ### **1\. Clone the Repository**
 
-git clone \[https://github.com/ImmunoInformatics-dev/pHLA-Bi-Mamba.git\]
+git clone https://github.com/ImmunoInformatics-dev/pHLA-Bi-Mamba.git
 
 cd pHLAmamba
 
