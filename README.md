@@ -49,9 +49,9 @@ Before running inference, place the pretrained model weights in the model/ direc
 **Default Directory Structure:**
 
 pHLA-Bi-mamba/  
-├── model/  
-│   ├── phla_bi_mamba_ba.pt       \# Checkpoint for Binding Affinity (BA) model  
-│   └── phla_bi_mamba_el.pt     \# Checkpoint for Binding Probability (EL) model
+├─ model/  
+│   ├─ phla_bi_mamba_ba.pt       \# Checkpoint for Binding Affinity (BA) model  
+│   └─ phla_bi_mamba_el.pt     \# Checkpoint for Binding Probability (EL) model
 ...
 
 ## **📂 Data Preparation**
