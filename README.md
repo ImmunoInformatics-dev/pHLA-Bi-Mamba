@@ -32,6 +32,7 @@ conda activate phlamamba
 
 \# 2\. Install PyTorch (CUDA 11.8 Example)
 Make sure the CUDA version matches your GPU driver.
+
 pip install torch torchvision torchaudio \--index-url \[https://download.pytorch.org/whl/cu118\](https://download.pytorch.org/whl/cu118)
 
 \# 3\. Install Mamba and Causal Conv1d (Essential for the backbone)  
