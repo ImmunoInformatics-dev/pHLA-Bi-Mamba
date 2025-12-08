@@ -34,16 +34,18 @@ conda activate phlamamba
 ```
 \# 2\. Install PyTorch (CUDA 11.8 Example)
 Make sure the CUDA version matches your GPU driver.
-
+```
 pip install torch torchvision torchaudio \--index-url \[https://download.pytorch.org/whl/cu118\](https://download.pytorch.org/whl/cu118)
-
+```
 \# 3\. Install Mamba and Causal Conv1d (Essential for the backbone)  
+```
 pip install causal-conv1d\>=1.2.0  
 pip install mamba-ssm
-
+```
 \# 4\. Install other utilities  
+```
 pip install pandas tqdm
-
+```
 ## **📥 Model Checkpoints**
 
 Before running inference, place the pretrained model weights in the model/ directory (or specify custom paths).
@@ -82,31 +84,31 @@ We provide Predict.py for flexible inference. You can choose to predict Binding 
 ### **1\. Default Inference (Both BA and EL)**
 
 Predicts both binding affinity and presentation probability and saves results to ./output/result.csv.
-
+```
 python Predict.py \--input ./data/test.csv
-
+```
 ### **2\. Custom Output Path & GPU Device**
 
 Run on a specific GPU (cuda:1) and save results to a specific file.
-
+```
 python Predict.py \\  
     \--input ./data/validation\_set.csv \\  
     \--output ./results/my\_predictions.csv \\  
     \--device cuda:1
-
+```
 
 ### **3\. Single Task Prediction**
 
 Save computation time by predicting only what you need.
 
 **Binding Affinity (BA) Only:**
-
+```
 python Predict.py \--input ./data/test.csv \--mode ba \--output ./output/ba\_only.csv
-
+```
 **Binding Probability (EL) Only:**
-
+```
 python Predict.py \--input ./data/test.csv \--mode el \--output ./output/el\_only.csv
-
+```
 
 
 
