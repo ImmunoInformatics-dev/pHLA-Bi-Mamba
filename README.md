@@ -20,16 +20,18 @@ This project depends on mamba-ssm, which requires a CUDA-enabled GPU.
 
 ### **1\. Clone the Repository**
 
+```
 git clone https://github.com/ImmunoInformatics-dev/pHLA-Bi-Mamba.git
 
 cd pHLAmamba
-
+```
 ### **2\. Environment Setup (Recommended: Conda)**
 
 \# 1\. Create and activate environment  
+```
 conda create \-n phlamamba python=3.10 -y
 conda activate phlamamba
-
+```
 \# 2\. Install PyTorch (CUDA 11.8 Example)
 Make sure the CUDA version matches your GPU driver.
 
